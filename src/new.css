@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background: linear-gradient(135deg, #6495ED, #ADD8E6); 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.Navbar {
+  width: 100%;
+  background-color: #4682B4;
+  padding: 15px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.Navbar h1 {
+  font-size: 2em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin-top: 100px; 
+}
+
+.game-board {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: #f4f4f9;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+  background-color: #B0C4DE; 
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.square:active {
+  background-color: #6495ED; 
+  transform: scale(0.95);
+}
+
+.hamburger-container {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.game-info {
+  position: fixed;
+  right: -300px; 
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
+  transition: right 0.3s ease-in-out;
+}
+
+.game-info.open {
+  margin-top: 3.3rem;
+  right: 0; 
+}
+
+.game-info ol {
+  padding: 0;
+}
+
+.game-info li {
+  
+  list-style: none;
+  margin: 10px 0;
+}
+
+.game-info button {
+  
+  background: #6495ED; 
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.game-info button:hover {
+  background: #B0C4DE; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-info button:active {
+  background: #4682B4; 
+  transform: scale(0.95);
+}
